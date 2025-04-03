@@ -1,5 +1,11 @@
-# Logs
-logs
+# --- Vite 관련 ---
+.env                # 환경 변수 파일
+.env.*              # .env.production, .env.development 등
+
+# Vite plugin cache (e.g. PWA)
+.vite               # vite-plugin-pwa 캐시 디렉토리
+
+# --- 시스템 캐시 ---
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +13,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# --- 빌드 결과물 ---
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# --- 라이브러리 폴더 ---
+node_modules/
+
+# --- macOS / Windows 등 시스템 파일 ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / 편집기 설정 ---
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# --- 타입스크립트 빌드 (향후 도입 대비) ---
+*.tsbuildinfo
